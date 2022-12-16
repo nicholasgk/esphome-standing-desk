@@ -24,7 +24,7 @@ bool UpliftDecoder::put(uint8_t b) {
       return false;
     }
   case HEIGHT1:
-    if (b == 0x00 || b == 0x01) {
+    if (b == 0x00 || b == 0x01 || b == 0x02 || b == 0x03 || b == 0x04) {
       buf_[0] = b;
       state_ = HEIGHT2;
       return false;
